@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:contentPadding="10dp"
+    android:layout_margin="10dp"
+    app:strokeColor="@color/colorWhite"
+    app:strokeWidth="1dp"
+    app:cardBackgroundColor="@color/colorFGreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvShayariContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserratsb"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="6dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mcvShayariCopy"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvShayariCopy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="60dp"
+            android:layout_marginVertical="6dp"
+            app:layout_constraintEnd_toStartOf="@+id/mcvShayariLike"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mtvShayariContent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShayariCopy"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/copy_icon"
+                app:tint="@color/colorFGreen" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvShayariLike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="60dp"
+            android:layout_marginVertical="6dp"
+            app:layout_constraintEnd_toStartOf="@+id/mcvShayariShare"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mcvShayariCopy"
+            app:layout_constraintTop_toBottomOf="@id/mtvShayariContent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShayariLike"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dislike"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvShayariShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="60dp"
+            android:layout_marginVertical="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mcvShayariLike"
+            app:layout_constraintTop_toBottomOf="@id/mtvShayariContent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShayariShare"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/share_icon"
+                app:tint="@color/colorFGreen"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

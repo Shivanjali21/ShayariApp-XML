@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allShayariCategoryFragment">
+
+    <fragment
+        android:id="@+id/allShayariCategoryFragment"
+        android:name="com.practice.shayariapp.fragments.home.AllShayariCategoryFragment"
+        android:label="fragment_home_shayari"
+        tools:layout="@layout/fragment_all_shayari_category">
+        <action
+            android:id="@+id/action_allShayariCategoryFragment_to_allShayariFragment"
+            app:destination="@id/allShayariFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/allShayariFragment"
+        android:name="com.practice.shayariapp.fragments.homedetail.AllShayariFragment"
+        android:label="fragment_all_shayari"
+        tools:layout="@layout/fragment_all_shayari">
+        <argument
+            android:name="shayariData"
+            app:argType="com.practice.shayariapp.model.allshayaricategory.AllShayariCategory"/>
+    </fragment>
+</navigation>
